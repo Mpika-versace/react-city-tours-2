@@ -1,0 +1,8 @@
+.tourlists
+{
+    padding: 4rem 0;
+    &-flex
+    {
+        @include flexbox($gg:1.5rem,$jc:center)
+    }
+}

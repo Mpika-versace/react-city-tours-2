@@ -1,0 +1,13 @@
+@mixin flexbox($fd:row,$jc:null,$ai:null,$gg:null) 
+{
+   display: flex;
+   flex-direction: $fd; 
+   justify-content: $jc;
+   align-items: $ai;
+   flex-wrap: wrap;
+   grid-gap: $gg;
+}
+@mixin flexElement($fs:0,$fg:1,$fb:auto) 
+{
+    flex:$fs $fg $fb
+}

@@ -1,0 +1,81 @@
+nav
+{
+    background-color: $mainblack;
+    position: relative;
+    // height: 6rem;
+    // line-height: 3rem;
+    // @include flexbox($ai:center);
+    
+.nav
+{
+    .bars
+    {
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.6rem;
+        z-index: 100;
+        @include md
+        {
+            display: none;
+        }
+        // position: absolute;
+        // right: 0;
+    }
+    
+    @include flexbox($jc:space-between,$ai:center);
+    &-list
+    {
+        @include flexbox($fd:column,$jc:center,$ai:center);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        z-index: 1;
+        transform: translateX(100%);
+        background-color: $mainblack;
+        
+        &.open
+        {
+            transform: translateX(0);
+            transition: transform .5s ease-in-out;
+            
+        }
+        
+      
+        @include md
+        {
+            
+            height: initial;
+            position: initial;
+            width: initial;
+            transform: initial;
+            background-color: initial;
+            @include flexbox($jc:center,$ai:center);
+
+        }
+
+    }
+    .fabars
+    {
+        color:red;
+        &.open
+        {
+            opacity: 0;
+        }
+    }
+        
+    &-link
+    {
+        padding: 0 .8rem;
+        color: $mainWhite;
+        font-weight: bold;
+        transition: color .5s;
+        &:hover
+        {
+            color: antiquewhite;
+        }
+    }
+}
+
+}
